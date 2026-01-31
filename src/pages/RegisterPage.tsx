@@ -1,5 +1,10 @@
 import React from "react";
+import "../css/RegisterPage.css";
 
 export default function RegisterPage() {
-  return <div>RegisterPage</div>;
+  return (
+    <div className="register">
+      <div></div>
+    </div>
+  );
 }
