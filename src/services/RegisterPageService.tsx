@@ -1,0 +1,17 @@
+import axios from "../config/AxiosConfig";
+import { type UserType } from "../types/Types";
+class RegisterPageService {
+  register(newUser: UserType): Promise<UserType> {
+    return new Promise((resolve: any, reject: any) => {
+      axios
+        .post(`/users`, newUser)
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  }
+}
+export default new RegisterPageService();

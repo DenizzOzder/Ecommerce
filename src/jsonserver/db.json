@@ -4,6 +4,18 @@
       "username": "testuser",
       "email": "test@test.com",
       "password": "password123"
+    },
+    {
+      "id": "4ca6",
+      "username": "deno",
+      "email": "canyayo.01@gmail.com",
+      "password": "denoDeno"
+    },
+    {
+      "id": "7bb0",
+      "username": "deniz",
+      "email": "deniz@deniz.com",
+      "password": "denizdeniz"
     }
   ]
 }
