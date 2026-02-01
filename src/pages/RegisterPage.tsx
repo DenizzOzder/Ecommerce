@@ -7,8 +7,10 @@ import { RegisterPageSchema } from "../schemas/RegisterPageSchema";
 import TextField from "@mui/material/TextField";
 import RegisterPageService from "../services/RegisterPageService";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
+  const navigate = useNavigate();
   const submit = async (values: any, actions: any) => {
     try {
       const payload: UserType = {
@@ -20,6 +22,7 @@ export default function RegisterPage() {
       actions.resetForm();
       if (payload) {
         toast.success("Kayıt işlemi başarılı!");
+        navigate("/login");
       }
     } catch (error) {
       console.error("Registration failed:", error);
