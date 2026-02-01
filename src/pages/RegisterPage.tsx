@@ -11,6 +11,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
   const navigate = useNavigate();
+  const handleClear = () => {
+    resetForm();
+  };
+
   const submit = async (values: any, actions: any) => {
     try {
       const payload: UserType = {
@@ -19,8 +23,9 @@ export default function RegisterPage() {
         password: values.password,
       };
       await RegisterPageService.register(payload);
-      actions.resetForm();
+
       if (payload) {
+        handleClear();
         toast.success("Kayıt işlemi başarılı!");
         navigate("/login");
       }
@@ -38,9 +43,6 @@ export default function RegisterPage() {
     onSubmit: submit,
     validationSchema: RegisterPageSchema,
   });
-  const handleClear = () => {
-    resetForm();
-  };
 
   return (
     <div className="register">
