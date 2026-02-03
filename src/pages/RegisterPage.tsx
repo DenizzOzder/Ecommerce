@@ -18,9 +18,11 @@ export default function RegisterPage() {
   const submit = async (values: any, actions: any) => {
     try {
       const payload: UserType = {
+        id: String(Math.floor(Math.random()*9999)),
         username: values.username,
         email: values.email,
         password: values.password,
+        balance: 1000,
       };
       await RegisterPageService.register(payload);
 
