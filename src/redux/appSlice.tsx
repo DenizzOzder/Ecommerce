@@ -2,7 +2,7 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
 import type { ProductType, UserType } from "../types/Types"
 
 export interface AppSliceType{
-    currentUser: UserType,
+    currentUser: UserType | null,
     loading:boolean,
     products: ProductType[]
 }

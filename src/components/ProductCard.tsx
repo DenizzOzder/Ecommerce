@@ -26,6 +26,7 @@ return (
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             {description}  
         </Typography>
+        <h2>{price}</h2>
       </CardContent>
       <CardActions>
         <Button size="small">Learn More</Button>
